@@ -1,11 +1,12 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from './useInView';
-import { HiMail, HiLocationMarker } from 'react-icons/hi';
+import { HiMail, HiLocationMarker, HiIdentification } from 'react-icons/hi';
 import { FaGithub } from 'react-icons/fa';
 
 const contactInfo = [
     { icon: <HiMail size={22} />, label: 'Email', value: 'matheswaran.m@zohocorp.com', href: 'mailto:matheswaran.m@zohocorp.com' },
+    { icon: <HiIdentification size={22} />, label: 'EmpId', value: 'ZSTTK-414/25', href: null },
     { icon: <HiLocationMarker size={22} />, label: 'Location', value: 'Tenkasi', href: null },
 ];
 
@@ -69,7 +70,7 @@ export default function Contact() {
                     animate={isInView ? { opacity: 1, y: 0 } : {}}
                     transition={{ duration: 0.6, delay: 0.1 }}
                 >
-                    Have a project in mind or just want to chat? I&apos;d love to hear from you!
+                    I&apos;d love to hear from you!
                 </motion.p>
 
                 <div className="contact__grid">
